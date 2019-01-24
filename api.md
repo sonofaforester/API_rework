@@ -27,6 +27,10 @@ should just read like this:
         public async Task<IActionResult> UpdateMonitoringPointType(Guid groupId, .... {
         ...
 ```
+- Metric/Indicators shall be called Indicators
+- Accounts/Locations shall be called Locations
+- Post creates
+- Put updates
 ## Existing Indicator models
 
 
@@ -85,9 +89,30 @@ _State model for logical Layer_
     AssignedSensorRoleType      string                          ## Assigned sensor role type code for the indicator
     Name                        string
     Id                          string($uuid)
-    Updated	                    string($date-time)
+    Updated                     string($date-time)
     Created                     string($date-time)
     Active                      boolean
+}
+```
+
+**NewIndicatorModel**
+```sh
+{
+    Indicator           SimpleIndicatorModel{...}
+    IsInSelectedGroup   boolean
+    AlarmSeverityLevel	number($double)
+}
+```
+
+**IndicatorTableDetailModel**
+```sh
+{
+    Id              string($uuid)
+    OpcId           string
+    Abbreviation    string
+    IsPaused        boolean
+    IsOverall	    boolean
+    FreqConvFactor  number($double)
 }
 ```
 
