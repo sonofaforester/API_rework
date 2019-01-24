@@ -53,8 +53,8 @@ _State model for logical Layer_
 **SimpleIndicatorModel**
 ```sh
 {
-    MetricTypeEnum	            string                          ## The metric type code of the given indicator
-    Color	                    string                          ## The color the indicator uses in the legend
+    MetricTypeEnum              string                          ## The metric type code of the given indicator
+    Color                       string                          ## The color the indicator uses in the legend
     AlarmDefinitionDto	        MetricAlarmDefinitionDto{...}
     LastDataProcessed	        string($date-time)              ## The last time the indicator processed data
     LastAlarmLogStateTypeCode	string                          ## The last alarm state the indicator was in (High warn/ High alarm/ …)
