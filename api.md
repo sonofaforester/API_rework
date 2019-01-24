@@ -35,8 +35,8 @@ _Indicator State Model for logical layer_
 ```sh
 {
     CurrentValue    number($double)     ## Current Value of indicator
-    LastUpdate	    string($date-time)  ## Last time it was updated
-    Id	            string($uuid)       ## Id of entity
+    LastUpdate      string($date-time)  ## Last time it was updated
+    Id              string($uuid)       ## Id of entity
     AlarmSeverity	integer($int32)     ## Alarm severity
 }
 ```
@@ -45,7 +45,7 @@ _Indicator State Model for logical layer_
 _State model for logical Layer_
 ```sh
 {
-    Id	            string($uuid)       ## Id of entity
+    Id              string($uuid)       ## Id of entity
     AlarmSeverity	integer($int32)     ## Alarm severity
 }
 ```
@@ -58,36 +58,36 @@ _State model for logical Layer_
     AlarmDefinitionDto	        MetricAlarmDefinitionDto{...}
     LastDataProcessed	        string($date-time)              ## The last time the indicator processed data
     LastAlarmLogStateTypeCode	string                          ## The last alarm state the indicator was in (High warn/ High alarm/ …)
-    DisplayUnits	            string                          ## The units to convert the points to when displaing on the trend
+    DisplayUnits                string                          ## The units to convert the points to when displaing on the trend
     BandLowFrequency	        number($double)                 ## The frequency of the low band
     BandHighFrequency	        number($double)                 ## The frequency of the high band
     HasSpectrum	                boolean                         ## True when the indicator may contain burst data
     BaseUnits	                string                          ## The units the data points are stored in
     DisplayUnitsType	        string                          ## A string to use for displaying the untis
-    UnitPrecision	            integer($int32)                 ## The number of decimal places to store the data points in
-    CurrentValue	            number($double)                 ## The current value of the indicator
+    UnitPrecision               integer($int32)                 ## The number of decimal places to store the data points in
+    CurrentValue                number($double)                 ## The current value of the indicator
     MetricType	                string                          ## The metric type code as a string
-    VibrationUnits	            boolean                         ## Indicates whether vibration unis is velocity otherwise acceleration
+    VibrationUnits              boolean                         ## Indicates whether vibration unis is velocity otherwise acceleration
     RoundedCurrentValue	        string                          ## The current value as a string rounded up.
-    VibrationCalculation	    string                          ## The vibration value as a string
+    VibrationCalculation        string                          ## The vibration value as a string
     IsVibration	                boolean                         ## True if the indicator recieves data from a vibration sensor
     IsDamagePressure	        boolean                         ## True if the indicator is of type DamageAccumulationPressure  
     FreqUnit	                string                          ## Hertz or CPM
-    MetricStreamConstants	    [...]
+    MetricStreamConstants       [...]
     Baseline	                BaselineModel{...}
-    BackCalculating	            boolean                         ## True if the indicator is currently having its data recalculated
+    BackCalculating             boolean                         ## True if the indicator is currently having its data recalculated
     AlarmSeverityLevel	        number($double)                 ## A value between 0 and 10 for how close the current value is to a given alarm threshold
-    NavigationIds	            string                          ## Ids for navigation
+    NavigationIds               string                          ## Ids for navigation
     Navigation	                string                          ## Non abbrevated Navigation
     NavigationFullName	        string                          ## Abbrevated Navigation
     MonitoringPointId	        string($uuid)                   ## The Id of the associated Monitoring Point
-    AssetId	                    string($uuid)                   ## The Id of the associdated Asset if there is an asset in the parents
-    AssignedSensorRoleType	    string                          ## Assigned sensor role type code for the indicator
-    Name	                    string
-    Id	                        string($uuid)
+    AssetId                     string($uuid)                   ## The Id of the associdated Asset if there is an asset in the parents
+    AssignedSensorRoleType      string                          ## Assigned sensor role type code for the indicator
+    Name                        string
+    Id                          string($uuid)
     Updated	                    string($date-time)
-    Created	                    string($date-time)
-    Active	                    boolean
+    Created                     string($date-time)
+    Active                      boolean
 }
 ```
 
